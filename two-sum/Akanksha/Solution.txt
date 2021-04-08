@@ -1,1 +1,22 @@
-Please add your solution / project folder
+class Solution(object):
+    def twoSum(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+        
+        for i in range(len(nums)-1):
+            if nums[i]*2 == target:
+                for j in range(i+1,len(nums)):
+                    if nums[j] == nums[i]:
+                        return(i,j)
+            
+            else:
+                find_num = target - nums[i]            
+        
+                if find_num in nums[i+1:len(nums)]:
+                    if(i != nums.index(find_num)):
+                        return [i,nums.index(find_num)]
+                 
+
