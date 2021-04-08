@@ -1,1 +1,37 @@
-Please add your solution / project folder
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        // Brute force: O(N^2) - O(1)
+        
+//         int a = 0, b = 0;
+//         for (int i = 0; i < nums.size()-1; i++) {
+//             for (int j = i+1; j < nums.size(); j++) {
+//                 if (nums[i]+nums[j] == target) {
+//                     a = i;
+//                     b = j;
+//                     break;
+//                 }
+//             }
+//         }
+        
+//         vector<int> ans;
+//         ans.push_back(a);
+//         ans.push_back(b);
+//         return ans;
+        
+        // O(N) - O(N)
+        map<int,int> diff;
+        vector<int> ans;
+        int a = 0, b = 0;
+        for (int i = 0; i < nums.size(); i++) {
+            if (diff.find(target-nums[i]) != diff.end()) {
+                ans.push_back(i);
+                ans.push_back(diff[target-nums[i]]);
+                break;
+            } else {
+                diff.insert(pair<int,int> (nums[i],i));
+            }
+        }
+        return ans;
+    }
+};
