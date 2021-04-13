@@ -1,1 +1,19 @@
 Please add your solution / project folder
+class Solution {
+public:
+    int numIdenticalPairs(vector<int>& nums) {
+        map<int,int> M;
+        for (auto i : nums) {
+            if (M.find(i) == M.end()) {
+                M[i] = 1;
+            } else {
+                M[i]++;
+            }
+        }
+        int count = 0;
+        for (auto const& [key,val] : M) {
+            count += val*(val-1)/2;
+        }
+        return count;
+    }
+};

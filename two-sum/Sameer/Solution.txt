@@ -1,1 +1,11 @@
 Please add your solution / project folder
+
+class Solution(object):
+    def twoSum(self, nums, target):
+        ans = []
+        for i in range(len(nums)-1):
+            print(i)
+            for j in range(i+1, len(nums)):
+                if nums[i] + nums[j] == target:
+                    ans = [i, j]
+        return ans  
