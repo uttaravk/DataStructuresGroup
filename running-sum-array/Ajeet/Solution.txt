@@ -1,1 +1,12 @@
 Please add your solution / project folder
+class Solution {
+public:
+    vector<int> runningSum(vector<int>& nums) {
+        vector<int> sum(nums);
+        
+        for (int i = 1; i < sum.size(); i++) {
+            sum[i] += sum[i-1];
+        }
+        return sum;
+    }
+};
