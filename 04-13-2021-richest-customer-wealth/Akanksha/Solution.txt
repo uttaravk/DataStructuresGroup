@@ -1,1 +1,14 @@
-Please add your solution / project folder
+class Solution {
+public:
+    int maximumWealth(vector<vector<int>>& accounts) {
+        int wealth_max = 0;
+        for (auto const& i : accounts) {
+            int wealth = 0;
+            for (auto const& j : i) {
+                wealth += j;
+            }
+            wealth_max = wealth_max < wealth ? wealth : wealth_max;
+        }
+        return wealth_max;
+    }
+};
