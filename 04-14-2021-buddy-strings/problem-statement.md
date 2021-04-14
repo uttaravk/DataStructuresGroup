@@ -1,4 +1,4 @@
-# Problem Statement: "Problem Title"
+# Problem Statement: Buddy Strings
 
 > Given two strings a and b, return true if you can swap two letters in a so the result is equal to b, otherwise, return false.
 
