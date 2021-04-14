@@ -27,12 +27,12 @@ Add Constraints (if any) here
 
 Java:
 ```
-Sample Class/Function Python Signature
+Sample Class/Function Java Signature
 ```
 
 Python:
 ```
-Sample Class/Function Java Signature
+Sample Class/Function Python Signature
  ```
 
 Test Cases:

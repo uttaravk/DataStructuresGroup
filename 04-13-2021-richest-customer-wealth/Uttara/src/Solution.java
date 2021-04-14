@@ -1,16 +1,16 @@
 
 
-public class RichestCustomerWealth {
+public class Solution {
 
     public static void main(String[] args) {
-        RichestCustomerWealth richestCustomerWealth = new RichestCustomerWealth();
+        Solution solution = new Solution();
         int[][] inAccounts1 = new int[][]{{1, 2, 3}, {3, 2, 1}};
         int[][] inAccounts2 = new int[][]{{1, 5}, {7, 3}, {3, 5}};
         int[][] inAccounts3 = new int[][]{{2, 8, 7}, {7, 1, 3}, {1, 9, 5}};
 
-        System.out.println(richestCustomerWealth.maximumWealth(inAccounts1));
-        System.out.println(richestCustomerWealth.maximumWealth(inAccounts2));
-        System.out.println(richestCustomerWealth.maximumWealth(inAccounts3));
+        System.out.println(solution.maximumWealth(inAccounts1));
+        System.out.println(solution.maximumWealth(inAccounts2));
+        System.out.println(solution.maximumWealth(inAccounts3));
 
     }
 

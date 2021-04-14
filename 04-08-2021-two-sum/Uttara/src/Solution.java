@@ -1,16 +1,16 @@
 import java.util.Arrays;
 import java.util.HashMap;
 
-public class TwoSumSolution {
+public class Solution {
 
     public static void main(String[] args) {
-        TwoSumSolution twoSumSolution = new TwoSumSolution();
+        Solution solution = new Solution();
         int[][] intArrays = new int[][]{{2, 7, 11, 15}, {3, 2, 4}, {3, 3}};
         int[] targets = new int[]{9, 6, 6};
 
         for (int i = 0; i < intArrays.length; i++) {
-            System.out.println(Arrays.toString(twoSumSolution.twoSum1(intArrays[i], targets[i])));
-            System.out.println(Arrays.toString(twoSumSolution.twoSum2(intArrays[i], targets[i])));
+            System.out.println(Arrays.toString(solution.twoSum1(intArrays[i], targets[i])));
+            System.out.println(Arrays.toString(solution.twoSum2(intArrays[i], targets[i])));
         }
 
     }

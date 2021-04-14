@@ -2,22 +2,22 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-public class GoodPairs {
+public class Solution {
 
     public static void main(String[] args) {
-        GoodPairs numOfGoodPairs = new GoodPairs();
+        Solution solution = new Solution();
         int[][] intArrays = new int[][]{{1, 2, 3, 1, 1, 3}, {1, 1, 1, 1}, {1, 2, 3}};
 
         for (int i = 0; i < intArrays.length; i++) {
-            System.out.println(numOfGoodPairs.numOfGoodPairs1(intArrays[i]));
-            System.out.println(numOfGoodPairs.numOfGoodPairs2(intArrays[i]));
+            System.out.println(solution.numIdenticalPairs1(intArrays[i]));
+            System.out.println(solution.numIdenticalPairs2(intArrays[i]));
         }
 
     }
 
     //Brute Force Solution
     //Time Complexity: O(n-1)^2
-    public int numOfGoodPairs1(int[] nums) {
+    public int numIdenticalPairs1(int[] nums) {
         int cnt = 0;
         for (int i = 0; i < nums.length - 1; i++) {
             for (int j = i + 1; j < nums.length; j++) {
@@ -32,7 +32,7 @@ public class GoodPairs {
 
     //Optimized Solution: nC2 solution [(n(n-1))/2]
     //Time Complexity: 2 x O(n)
-    public int numOfGoodPairs2(int[] nums) {
+    public int numIdenticalPairs2(int[] nums) {
         int cnt = 0;
         Map<Integer, Integer> numsMap = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
