@@ -1,1 +1,31 @@
-Please add your solution / project folder
+class Solution:
+    def buddyStrings(self, a: str, b: str) -> bool:
+        out_of_place = 0
+        index = []
+        a_diff = []
+        b_diff = []
+
+        if len(a) != len(b):
+            return False
+        else:
+            for i in range(len(a)):
+                if a[i] not in b:
+                    return False
+
+            for i in range(len(a)):
+                if a[i] != b[i]:
+                    out_of_place = out_of_place + 1
+                    index.append(i)
+                    a_diff.append(a[i])
+                    b_diff.append(b[i])
+
+            if out_of_place > 2:
+                return False
+            elif out_of_place == 2:
+                if a_diff[::-1] == b_diff:
+                    return True
+            elif out_of_place == 0:
+                if len(a) > len(set(a)):
+                    return True
+            return False
+            
