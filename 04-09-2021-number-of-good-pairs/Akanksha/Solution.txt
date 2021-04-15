@@ -1,1 +1,15 @@
-Please add your solution / project folder
+class Solution:
+    def numIdenticalPairs(self, nums: List[int]) -> int:
+        
+        output = 0
+        
+        if len(set(nums)) == len(nums):
+            return 0
+        
+        #need to find if same number exists
+        for i in range(len(nums)):
+            for j in range(i+1, len(nums)):
+                if nums[i] == nums[j]:
+                    output = output + 1
+            
+        return(output)
