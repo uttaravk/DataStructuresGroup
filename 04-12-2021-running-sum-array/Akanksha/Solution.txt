@@ -1,1 +1,10 @@
-Please add your solution / project folder
+class Solution:
+    def runningSum(self, nums: List[int]) -> List[int]:
+        nums_sum = 0
+        output = []
+        
+        for i in range(len(nums)):
+            nums_sum = nums_sum + nums[i]
+            output.append(nums_sum)
+            
+        return(output)
