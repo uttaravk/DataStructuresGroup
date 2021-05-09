@@ -1,0 +1,29 @@
+class Solution {
+public:
+    int dp[101][101] = {0};
+    int * count_zeros_ones(const string & str) {
+        int count[2] = {0,0};
+        for (auto const& i : str) {
+            if (i == '0') {
+                count[0]++;
+            } else {
+                count[1]++;
+            }
+        }
+        // std::cout << "0: " << count[0] << ", 1: " << count[1] << std::endl;
+        return count;
+    }
+    
+    int findMaxForm(vector<string>& strs, const int m, const int n) {
+        for (auto s : strs) {
+            int *count = count_zeros_ones(s);
+            for (int zeros = m; zeros >= count[0]; zeros--) {
+                for (int ones = n; ones >= count[1]; ones--) {
+                    dp[zeros][ones] = max(dp[zeros-count[0]][ones-count[1]]+1, dp[zeros][ones]);
+                }
+                 
+            }
+        }
+        return dp[m][n];
+    }
+};
